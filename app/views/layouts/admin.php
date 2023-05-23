@@ -139,6 +139,17 @@
                     </ul>
                 </li>
                 <li class="treeview">
+                    <a href="#"><i class="fa fa-book"></i> <span>Словарь</span>
+                        <span class="pull-right-container">
+                             <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="<?= ADMIN ?>/dictionary">Список слов</a></li>
+                        <li><a href="<?= ADMIN ?>/dictionary/add">Добавить слово</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
                     <a href="#"><i class="fa fa-list-alt"></i> <span>Страницы</span>
                         <span class="pull-right-container">
                              <i class="fa fa-angle-left pull-right"></i>

@@ -1,3 +1,4 @@
 vendor
+!vendor/ishop
 /public/adminlte
 /public/js/scripts.js

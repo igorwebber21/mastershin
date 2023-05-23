@@ -772,7 +772,7 @@
           </p>
           <p>
             <i class="icon icon-clock"></i>
-            Ежедневно: с 8:00 до 20:00
+            <?=$dictionary['Daily'][$lang]?>: с 8:00 до 20:00
           </p>
         </div>
       </div>
@@ -794,7 +794,7 @@
           </div>
         </div>
         <div class="col-right">
-          <div class="address">  <i class="icon icon-clock" style="margin-right: 10px;"></i> Ежедневно: с 8:00 до 20:00						</div>
+          <div class="address">  <i class="icon icon-clock" style="margin-right: 10px;"></i> <?=$dictionary['Daily'][$lang]?>: с 8:00 до 20:00						</div>
           <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
             <i class="icon-shape icon"></i>
             <span class="txt-white">Оставить заявку</span>
@@ -818,7 +818,7 @@
         <div class="header-right">
           <div class="header-right-top">
             <div class="address"> <i class="icon icon-clock" style="margin-right: 6px; position: relative; top: 1px; left: 0;"></i>
-              Ежедневно c <span class="custom-color">8:00</span> до <span class="custom-color">20:00</span>
+              <?=$dictionary['Daily'][$lang]?> c <span class="custom-color">8:00</span> до <span class="custom-color">20:00</span>
 
                 <div class="social-links social-header">
                     <ul>
@@ -849,11 +849,20 @@
           <div class="header-right-bottom">
 
             <div class="header-phone">
-                                    <span class="phone-number">
-                                       +38<span class="code">(050)</span>-866-56-07
-                                        <a style="font-weight: normal; color: #fff;" href="viber://chat?number=%2B380508665607">(Viber)</a>
-                                    </span>
+                <span class="phone-number">
+                   +38<span class="code">(050)</span>-866-56-07
+                    <a style="font-weight: normal; color: #fff;" href="viber://chat?number=%2B380508665607">(Viber)</a>
+                </span>
             </div>
+
+            <div class="header-lang">
+                  <a href="/" class="<?php  if($lang == 'ru') echo 'selected-lang'; ?>"> RU </a>
+                  <span>|</span>
+                  <a href="/ua" class="<?php if($lang == 'ua') echo 'selected-lang'; ?>"> UA </a>
+                  <span>|</span>
+                  <a href="/en" class="<?php if($lang == 'en') echo 'selected-lang'; ?>"> EN </a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -974,7 +983,7 @@
                         <i class="icon icon-clock"></i>
                     </div>
                     <div class="item-description">
-                        Ежедневно: <span>с 8:00 до 20:00</span>
+                      <?=$dictionary['Daily'][$lang]?>: <span>с 8:00 до 20:00</span>
                     </div>
                 </address>
             </div>

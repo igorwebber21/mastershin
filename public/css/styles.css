@@ -33313,7 +33313,27 @@ input.input-text.qty {
 }
 
 header .header-right-bottom {
-    margin-right: 70px
+    margin-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .header-lang {
+    margin-left: 50px;
+    color: #fff;
+}
+
+header .header-lang a{
+    color: #fff;
+}
+
+header .header-lang a.selected-lang{
+    color: #00AEED;
+}
+
+header .header-lang span{
+    margin: 0 5px;
 }
 
 .woocommerce .products .prd-info .star-rating,.woocommerce .product .prd-info .star-rating {

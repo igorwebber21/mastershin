@@ -23,11 +23,11 @@ class DictionaryController extends AppController
     $count = R::count('dictionary');
     $pagination = new Pagination($page, $perpage, $count);
     $start = $pagination->getStart();
-    $dictionary = R::getAll("SELECT * FROM dictionary
+    $dictionaryAdmin = R::getAll("SELECT * FROM dictionary
                                      ORDER BY id DESC LIMIT $start, $perpage");
 
     $this->setMeta('Список слов');
-    $this->set(compact('dictionary', 'pagination', 'count'));
+    $this->set(compact('dictionaryAdmin', 'pagination', 'count', 'perpage', 'page'));
 
   }
 
@@ -90,9 +90,9 @@ class DictionaryController extends AppController
     }
 
     $id = $this->getRequestID();
-    $dictionary = R::load('dictionary', $id);
-    $this->setMeta("Редактирование слова {$dictionary->keyword}");
-    $this->set(compact('dictionary'));
+    $dictionaryAdmin = R::load('dictionary', $id);
+    $this->setMeta("Редактирование слова {$dictionaryAdmin->keyword}");
+    $this->set(compact('dictionaryAdmin'));
   }
 
   public function deleteAction()

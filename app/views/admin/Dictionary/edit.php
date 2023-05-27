@@ -21,31 +21,31 @@
                         <div class="form-group has-feedback">
                             <label for="title">Ключ (содержит только английские символы. Пример: "ShinoMontazh")</label>
                             <input type="text" name="keyword" class="form-control" id="keyword" placeholder="Key" pattern = "[a-zA-Z]+"
-                                   value="<?=$dictionary['keyword']?>"required>
+                                   value="<?=$dictionaryAdmin['keyword']?>" readonly required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
 
                         <div class="form-group has-feedback">
                             <label for="title">Слово (фраза) на русском</label>
-                            <input type="text" name="ru" class="form-control" id="ru" placeholder="RU" value="<?=$dictionary['ru']?>" required>
+                            <input type="text" name="ru" class="form-control" id="ru" placeholder="RU" value="<?=$dictionaryAdmin['ru']?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
 
                         <div class="form-group has-feedback">
                             <label for="title">Слово (фраза) на украинском</label>
-                            <input type="text" name="ua" class="form-control" id="ua" placeholder="UA" value="<?=$dictionary['ua']?>" required>
+                            <input type="text" name="ua" class="form-control" id="ua" placeholder="UA" value="<?=$dictionaryAdmin['ua']?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
 
                         <div class="form-group has-feedback">
                             <label for="title">Слово (фраза) на английском</label>
-                            <input type="text" name="en" class="form-control" id="en" placeholder="EN" value="<?=$dictionary['en']?>" required>
+                            <input type="text" name="en" class="form-control" id="en" placeholder="EN" value="<?=$dictionaryAdmin['en']?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
 
                     </div>
                     <div class="box-footer">
-                        <input type="hidden" name="id" value="<?=$dictionary['id'];?>">
+                        <input type="hidden" name="id" value="<?=$dictionaryAdmin['id'];?>">
                         <button type="submit" class="btn btn-success">Сохранить</button>
                     </div>
                 </form>

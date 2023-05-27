@@ -759,11 +759,11 @@
         <div class="header-info-mobile-inside">
           <p>
             <i class="icon icon-locate"></i>
-            г. Одесса, ул. Весенняя, 14 (угол М. Малиновского)
+            <?=$dictionary['CompanyAddress'][$lang]?>
           </p>
           <p>
             <i class="icon icon-phone"></i>
-            +38(050)-866-56-07
+              +38(050)-866-56-07
               (<a href="viber://chat?number=%2B380508665607">Viber</a>)
           </p>
           <p>
@@ -772,7 +772,7 @@
           </p>
           <p>
             <i class="icon icon-clock"></i>
-            <?=$dictionary['Daily'][$lang]?>: с 8:00 до 20:00
+            <?=$dictionary['Daily'][$lang]?>: <span> <?=$dictionary['FromTo'][$lang]?>
           </p>
         </div>
       </div>
@@ -782,22 +782,22 @@
         </div>
         <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
           <i class="icon-shape icon"></i>
-          <span class="txt-white">Оставить заявку</span>
+          <span class="txt-white"><?=$dictionary['OstavitZayavku'][$lang]?></span>
         </a>
       </div>
       <div class="heade-mobile">
         <div class="col-left mr-auto">
           <div class="logo">
-            <a href="/">
+            <a href="/<?=$langUrl?>">
               <img src="/images/logo.png" alt="Logo">
             </a>
           </div>
         </div>
         <div class="col-right">
-          <div class="address">  <i class="icon icon-clock" style="margin-right: 10px;"></i> <?=$dictionary['Daily'][$lang]?>: с 8:00 до 20:00						</div>
+          <div class="address">  <i class="icon icon-clock" style="margin-right: 10px;"></i> <?=$dictionary['Daily'][$lang]?>: <span> <?=$dictionary['FromTo'][$lang]?>						</div>
           <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
             <i class="icon-shape icon"></i>
-            <span class="txt-white">Оставить заявку</span>
+            <span class="txt-white"><?=$dictionary['OstavitZayavku'][$lang]?></span>
           </a>
           <button type="button" class="navbar-toggle" style="">
             <span></span>
@@ -811,14 +811,14 @@
           <i class="icon-arrow_down js-info-toggle"></i>
         </div>
         <div class="logo">
-          <a href="/">
+          <a href="/<?=$langUrl?>">
             <img src="/images/logo.png" alt="Logo">
           </a>
         </div>
         <div class="header-right">
           <div class="header-right-top">
             <div class="address"> <i class="icon icon-clock" style="margin-right: 6px; position: relative; top: 1px; left: 0;"></i>
-              <?=$dictionary['Daily'][$lang]?> c <span class="custom-color">8:00</span> до <span class="custom-color">20:00</span>
+              <?=$dictionary['Daily'][$lang]?> <?=$dictionary['From'][$lang]?> <span class="custom-color">8:00</span> <?=$dictionary['To'][$lang]?> <span class="custom-color">20:00</span>
 
                 <div class="social-links social-header">
                     <ul>
@@ -840,7 +840,7 @@
             </div>
             <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
               <i class="icon-shape icon txt-white"></i>
-              <span class="txt-white">Записаться к нам</span>
+              <span class="txt-white"><?=$dictionary['ZapisatsaKNam'][$lang]?></span>
             </a>
             <button type="button" class="navbar-toggle">
               <i class="icon icon-lines-menu"></i>
@@ -874,17 +874,17 @@
             </div>
             <ul id="menu-primary-menu" class="nav navbar-nav">
               <li id="menu-link-main" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-56">
-                <a href="/" class="menu-link main-menu-link">Главная</a>
+                <a href="/<?=$langUrl?>" class="menu-link main-menu-link"><?=$dictionary['Home'][$lang]?></a>
               </li>
               <li id="menu-link-tires" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown">
                 <a href="#" class="menu-link main-menu-link">
-                  Шины<span class="ecaret"></span>
+                  <?=$dictionary['Tires'][$lang]?><span class="ecaret"></span>
                 </a>
                 <ul class="dropdown-menu menu-odd  menu-depth-1">
 
                     <?php foreach ($mainServices as $service): if($service['category'] == 'tires'): ?>
                       <li id="nav-menu-item-<?=$service['id']?>" class="sub-menu-item menu-tires  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-car_services">
-                        <a href="/service/<?=$service['alias']?>"><?=$service['name']?></a>
+                        <a href="/<?=$langUrl?>/service/<?=$service['alias']?>"><?=$service['name']?></a>
                       </li>
                     <?php endif; endforeach;?>
 
@@ -892,12 +892,12 @@
               </li>
               <li id="menu-link-disks" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown">
                 <a href="#" class="menu-link main-menu-link">
-                  Диски<span class="ecaret"></span>
+                  <?=$dictionary['Disks'][$lang]?><span class="ecaret"></span>
                 </a>
                 <ul class="dropdown-menu menu-odd  menu-depth-1">
                   <?php foreach ($mainServices as $service): if($service['category'] == 'disks'): ?>
                       <li id="nav-menu-item-<?=$service['id']?>" class="sub-menu-item menu-disks menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-car_services">
-                          <a href="/service/<?=$service['alias']?>"><?=$service['name']?></a>
+                          <a href="/<?=$langUrl?>/service/<?=$service['alias']?>"><?=$service['name']?></a>
                       </li>
                   <?php endif; endforeach;?>
                 </ul>
@@ -910,7 +910,7 @@
               <?php if($pages): ?>
                 <?php foreach ($pages as $page): ?>
                     <li id="menu-link-<?=$page['alias']?>" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="/<?=$page['alias']?>" class="menu-link main-menu-link"><?=$page['title']?></a>
+                        <a href="/<?=$langUrl?>/<?=$page['alias']?>" class="menu-link main-menu-link"><?=$page['title']?></a>
                     </li>
                 <?php endforeach;?>
               <?php endif;?>
@@ -956,12 +956,12 @@
         <!-- Google map -->
         <div class="container container-tablet-md container-tablet-nogutter">
             <div class="footer-section02__box01">
-                <div class="footer-section02__title">Контакты</div>
+                <div class="footer-section02__title"><?=$dictionary['Contacts'][$lang]?></div>
                 <address class="contact-info-item">
                     <div class="item-icon">
                         <i class="icon icon-locate"></i>
                     </div>
-                    <div class="item-description">г. Одесса, ул. Весенняя, 14 (угол М. Малиновского)</div>
+                    <div class="item-description"><?=$dictionary['CompanyAddress'][$lang]?></div>
                 </address>
                 <address class="contact-info-item">
                     <div class="item-icon">
@@ -977,13 +977,13 @@
                         <a href="mailto:info@mastershin.od.ua">info@mastershin.od.ua</a>
                     </div>
                 </address>
-                <div class="footer-section02__title">График работы:</div>
+                <div class="footer-section02__title"><?=$dictionary['GraphicRaboti'][$lang]?>:</div>
                 <address class="contact-info-item">
                     <div class="item-icon">
                         <i class="icon icon-clock"></i>
                     </div>
                     <div class="item-description">
-                      <?=$dictionary['Daily'][$lang]?>: <span>с 8:00 до 20:00</span>
+                      <?=$dictionary['Daily'][$lang]?>: <span> <?=$dictionary['FromTo'][$lang]?></span>
                     </div>
                 </address>
             </div>
@@ -993,7 +993,7 @@
         <div class="container container-tablet-md">
             <div class="copyright">
                 Copyright © 2018 - <?=date('Y')?> mastershin.od.ua.<span class="clearfix visible-xs"></span>
-                Все права защищены.
+                <?=$dictionary['Daily'][$lang]?>.
             </div>
             <div class="footer-bottom-right">
                 <div class="social-links">
@@ -1027,7 +1027,7 @@
             <div class="modal-header">
                 <a href="#" class="appointment" data-toggle="modal" data-target="#appointmentForm">
                     <i class="icon-shape icon txt-white"></i>
-                    <span class="txt-white">Записаться к нам</span>
+                    <span class="txt-white"><?=$dictionary['ZapisatsaKNam'][$lang]?></span>
                 </a>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="icon-close"></i>
@@ -1036,21 +1036,20 @@
             <div class="modal-body">
                 <div class="container-fluid">
                     <h2 class="modal-title-main">
-                        Шиномонтаж <span class="color">Мастер Шин</span>
+                      <?=$dictionary['TireFitting'][$lang]?> <span class="color"><?=$dictionary['MasterShin'][$lang]?></span>
                     </h2>
 
                     <p>
-                        Запись на приём в режиме онлайн осуществляется ежедневно с 8:00 до 19:00 (1 место / каждый час).<br/>
-                        Также Вы можете попасть к нам в режиме живой очереди (2 места / каждый час).
+                        <?=$dictionary['OnlineAppointment'][$lang]?><br/>
+                        <?=$dictionary['LiveQueueMode'][$lang]?>
                     </p>
 
                     <p>
-
-                        Не хотите стоять в очереди? Выберите нужную дату и время и запишитесь на услугу.
+                      <?=$dictionary['SelectDesiredDate'][$lang]?>
                     </p>
 
                     <p>
-                        Если у Вас возникли какие-то вопросы -  звоните по номеру +38(050)-866-56-07.
+                      <?=$dictionary['HaveQuestions'][$lang]?>
                     </p>
 
                     <div class="divider divider-sm"></div>
@@ -1060,11 +1059,11 @@
                             <div class="contact-form form-horizontal form-default">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h5>Оставить заявку</h5>
+                                        <h5><?=$dictionary['OstavitZayavku'][$lang]?></h5>
                                         <div class="zapis-block-top">
                                             <div class="form-group">
                                                     <span class="wpcf7-form-control-wrap fname">
-                                                        <input type="text" name="modal-user-name" id="modal-user-name" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="Ваше имя" required/>
+                                                        <input type="text" name="modal-user-name" id="modal-user-name" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="<?=$dictionary['YourName'][$lang]?>" required/>
                                                     </span>
                                             </div>
                                             <div class="form-group">
@@ -1077,12 +1076,12 @@
                                         <div class="zapis-block-top">
                                             <div class="form-group">
                                                     <span class="wpcf7-form-control-wrap fname">
-                                                        <input type="text" name="modal-car-model" id="modal-car-model" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="Марка авто (BMW X5)" required/>
+                                                        <input type="text" name="modal-car-model" id="modal-car-model" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="<?=$dictionary['CarBrandBMW'][$lang]?>" required/>
                                                     </span>
                                             </div>
                                             <div class="form-group">
                                                     <span class="wpcf7-form-control-wrap your-phone">
-                                                        <input type="text" name="modal-car-number" id="modal-car-number" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="Гос номер (АА 0000 BB)" required/>
+                                                        <input type="text" name="modal-car-number" id="modal-car-number" value="" size="40" class="form-control" aria-required="true" aria-invalid="false" placeholder="<?=$dictionary['StateNumber'][$lang]?>" required/>
                                                     </span>
                                             </div>
                                         </div>
@@ -1093,7 +1092,7 @@
                                                             <span class="wpcf7-form-control-wrap select1">
                                                                 <select name="zapisService" id="zapisService"  class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required input-custom"
                                                                         aria-required="true" aria-invalid="false" required>
-                                                                    <option value="" >Выберите услугу</option>
+                                                                    <option value=""><?=$dictionary['ChooseService'][$lang]?></option>
                                                                     <?php foreach ($mainServices as $mainService):
                                                                       if($mainService['id'] == 2) $mainService['name'] = "Переобувка авто";
                                                                       ?>
@@ -1116,7 +1115,7 @@
                                                 <div class="select-wrapper">
                                                             <span class="wpcf7-form-control-wrap select1">
                                                                 <select name="zapisTime" id="zapisTime" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required input-custom" aria-required="true" aria-invalid="false" required>
-                                                                    <option value="">Выберите время</option>
+                                                                    <option value=""><?=$dictionary['ChooseTime'][$lang]?></option>
                                                                     <?php foreach ($timeIntervals[$zapisDate] as $timeInterval): ?>
                                                                         <option value="<?=$timeInterval['time']?>" id="time_<?=str_replace(':', '', $timeInterval['time'])?>" <?php if(!$timeInterval['res']) echo "disabled";?>>
                                                                           <?=$timeInterval['time']?>
@@ -1130,7 +1129,7 @@
 
                                         <div class="form-group">
                                                     <span class="wpcf7-form-control-wrap your-message">
-                                                        <textarea name="modal-user-message" id="modal-user-message" cols="20" rows="5" class="form-control" aria-required="true" aria-invalid="false" placeholder="Сообщение (не обязательно)"></textarea>
+                                                        <textarea name="modal-user-message" id="modal-user-message" cols="20" rows="5" class="form-control" aria-required="true" aria-invalid="false" placeholder="<?=$dictionary['MessageOptional'][$lang]?>"></textarea>
                                                     </span>
                                         </div>
                                     </div>
@@ -1139,7 +1138,7 @@
                                 <div class="row">
                                     <div class="col-sm-4 col-md-3 modal-send-btn">
                                         <button type="submit" id="submit-btn" class=" btn btn-border btn-invert">
-                                            <span>Записаться</span>
+                                            <span><?=$dictionary['SignUp'][$lang]?></span>
                                         </button>
                                     </div>
                                     <span class="ajax-loader"></span>

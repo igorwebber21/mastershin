@@ -1,6 +1,6 @@
 <div id="pageTitle">
     <div class="container">
-        <h1><?php echo ($article['category'] == 'tires') ? "Шины" : "Диски";?></h1>
+        <h1><?php echo ($article['category'] == 'tires') ? $dictionary['Tires'][$lang] :  $dictionary['Disks'][$lang];?></h1>
     </div>
 </div>
 <div id="pageContent">
@@ -12,15 +12,15 @@
                 <div class="col-12 col-sm-5 col-md-4 service-leftbar">
                     <div class="block-aside-wrapper">
                         <div class="block-aside__wrapper widget block-aside" id="service_menu-3">
-                            <h4 class="block-aside__title"><?php echo ($article['category'] == 'tires') ? "Шины" : "Диски";?></h4>
+                            <h4 class="block-aside__title"><?php echo ($article['category'] == 'tires') ? $dictionary['Tires'][$lang] :  $dictionary['Disks'][$lang];?></h4>
                             <div class="block-aside__content no-indent">
                                 <nav class="nav-aside">
                                     <ul>
                                         <?php foreach($services as $service): ?>
                                         <li>
-                                            <a href="/service/<?=$service['alias']?>" title="<?=$service['name']?>">
+                                            <a href="/ua/service/<?=$service['alias']?>" title="<?=$service['name_ua']?>">
                                                 <!-- <span class="nav-aside__icon icon-car-wheel"></span> -->
-                                                <span class="nav-aside_text"><?=$service['name']?></span>
+                                                <span class="nav-aside_text"><?=$service['name_ua']?></span>
                                             </a>
                                         </li>
                                         <?php endforeach; ?>
@@ -35,10 +35,10 @@
                 <div class="divider-lg hidden-lg hidden-md hidden-sm"></div>
                 <div class="col-12 col-sm-7 col-md-8 service-content">
 
-                    <h1><?=$article['name']?></h1>
-                    <?=$article['text']?>
+                    <h1><?=$article['name_ua']?></h1>
+                    <?=$article['text_ua']?>
 
-                    <div class="text-center"><a class="btn btn-border btn-invert otzivi-btn" href="/prays-list"><span>Смотреть полный прайс</span> </a></div>
+                    <div class="text-center"><a class="btn btn-border btn-invert otzivi-btn" href="/ua/prays-list"><span><?=$dictionary['SeeFullPrice'][$lang]?></span> </a></div>
 
                 </div>
             </div>

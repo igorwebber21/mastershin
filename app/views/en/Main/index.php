@@ -33,7 +33,7 @@
                                                                                               <?=$dictionary['TrustBestGetResults'][$lang]?>
                                                                                             </p>
                                                                                             <div>
-                                                                                                <a href="/prays-list" class="btn btn-border slide-btn">
+                                                                                                <a href="/en/prays-list" class="btn btn-border slide-btn">
                                                                                                     <span><?=$dictionary['LearnMore'][$lang]?></span>
                                                                                                 </a>
                                                                                             </div>
@@ -59,7 +59,7 @@
                                                                                               <?=$dictionary['PaintingDiscsThermalEnamel'][$lang]?>
                                                                                             </p>
                                                                                             <div>
-                                                                                                <a href="/prays-list" class="btn btn-border slide-btn">
+                                                                                                <a href="/en/prays-list" class="btn btn-border slide-btn">
                                                                                                     <span><?=$dictionary['LearnMore'][$lang]?></span>
                                                                                                 </a>
                                                                                             </div>
@@ -258,7 +258,7 @@
                                                         <div class="elementor-widget-container">
                                                             <div class="block bg-1">
                                                                 <div class="container position-relative">
-                                                                    <div class="section__text-background text-color01">Услуги</div>
+                                                                    <div class="section__text-background text-color01"><?=$dictionary['Uslugi'][$lang]?></div>
                                                                     <div class="row" id="slideMobile">
                                                                         <div class="col-sm-6 col-md-4">
                                                                             <div class="block-title text-left">
@@ -560,7 +560,7 @@
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="item__autor">
-                                                                                    <span class="color">Александра</span>
+                                                                                    <span class="color"><?=$dictionary['Alexandra'][$lang]?></span>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="item text-center">
@@ -574,7 +574,7 @@
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="item__autor">
-                                                                                    <span class="color">Инокентий</span>
+                                                                                    <span class="color"> <?=$dictionary['Innocentiy'][$lang]?></span>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="item text-center">
@@ -587,7 +587,7 @@
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="item__autor">
-                                                                                    <span class="color">Николай</span>
+                                                                                    <span class="color"><?=$dictionary['Nicholas'][$lang]?></span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

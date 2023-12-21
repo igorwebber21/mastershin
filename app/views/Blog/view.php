@@ -11,6 +11,8 @@
 
                 <div class="col-12 col-sm-5 col-md-4 service-leftbar">
                     <div class="block-aside-wrapper">
+
+
                         <div class="block-aside__wrapper widget block-aside" id="service_menu-3">
                             <h4 class="block-aside__title"><?php echo ($article['category'] == 'tires') ? "Шины" : "Диски";?></h4>
                             <div class="block-aside__content no-indent">
@@ -26,7 +28,11 @@
                                         <?php endforeach; ?>
                                     </ul>
                                 </nav>
+
                             </div>
+
+
+
                         </div>
                     </div>
                 </div>

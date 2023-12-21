@@ -12,7 +12,7 @@
     Router::add('^ua/service/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Blog', 'action' => 'view', 'prefix' => 'ua']);
 
     // en
-    Router::add('^en', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'en']);
+    Router::add('^en$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'en']);
     Router::add('^en/?(?P<alias>[a-z-]+)/?$', ['controller' => 'Page', 'action' => 'view', 'prefix' => 'en']); #for pages
     Router::add('^en/service/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Blog', 'action' => 'view', 'prefix' => 'en']);
 

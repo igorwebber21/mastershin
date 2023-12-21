@@ -19,11 +19,11 @@ class PageController extends AppController
 
     if($currPage){
 
-      $this->setMeta($currPage['title'].' - Шиномонтаж 4 в Одессе, ул. Весенняя 14',
-        $currPage['title'].' - Шиномонтаж в Одессе, ул. Весенняя 14', $currPage['title'].', шиносервис, диски, шины');
+      $this->setMeta($currPage['title_ua'].' - Шиномонтаж в Одесі, вул. Весняна 14',
+        $currPage['title_ua'].' - Шиномонтаж в Одесі, вул. Весняна 14', $currPage['title'].', шиносервіс, диски, шини');
     }
     else{
-      throw new \Exception("Страница не найдена", 404);
+      throw new \Exception("Сторінка не знайдена", 404);
     }
 
     /*$existPage = in_array($this->route['alias'], $pages);

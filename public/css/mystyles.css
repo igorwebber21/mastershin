@@ -12,6 +12,24 @@
 	padding: 17px 41px!important;
 }
 
+#mobile-menu .header-lang{
+	padding-left: 25px;
+	margin: 0 0 15px 0;
+}
+
+#mobile-menu .header-lang span{
+	color: #fff;
+	padding: 0 5px;
+}
+
+#mobile-menu .header-lang a{
+	color: #fff!important;
+}
+
+#mobile-menu .header-lang a.selected-lang {
+	color: #00AEED!important;
+}
+
 .banner-content{
 	max-width: 750px;
 	margin-left: 50px;

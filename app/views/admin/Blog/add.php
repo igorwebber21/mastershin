@@ -17,11 +17,24 @@
       <div class="box">
         <form class="articleForm" action="<?=ADMIN;?>/blog/add" method="post" data-toggle="validator">
           <div class="box-body">
+
             <div class="form-group has-feedback">
-              <label for="title">Название услуги</label>
+              <label for="title">Название услуги (RU)</label>
               <input type="text" name="name" class="form-control" id="name" placeholder="Наименование категории" required>
               <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
+
+            <div class="form-group has-feedback">
+              <label for="title">Назва послуги (UA)</label>
+              <input type="text" name="name_ua" class="form-control" id="name_ua" placeholder="Назва послуги" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+              <div class="form-group has-feedback">
+                  <label for="title">Service name (EN)</label>
+                  <input type="text" name="name_en" class="form-control" id="name_en" placeholder="Service name" required>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              </div>
 
             <div class="form-group">
               <label>Категория</label>
@@ -32,11 +45,21 @@
             </div>
 
 
+            <div class="form-group has-feedback">
+              <label for="content">Описание услуги (RU)</label>
+              <textarea class="text"  id="text" name="text" cols="80" rows="10"></textarea>
+            </div>
 
             <div class="form-group has-feedback">
-              <label for="content">Описание услуги</label>
-              <textarea id="text" name="text" cols="80" rows="10"></textarea>
+              <label for="content">Опис послуги (UA)</label>
+              <textarea class="text" id="text_ua" name="text_ua" cols="80" rows="10"></textarea>
             </div>
+
+            <div class="form-group has-feedback">
+              <label for="content">Service description (EN)</label>
+              <textarea class="text" id="text_en" name="text_en" cols="80" rows="10"></textarea>
+            </div>
+
 
               <div class="form-group form-section-checkboxes form-section-bmt">
 

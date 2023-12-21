@@ -19,11 +19,11 @@ class PageController extends AppController
 
     if($currPage){
 
-      $this->setMeta($currPage['title'].' - Шиномонтаж 4 в Одессе, ул. Весенняя 14',
-        $currPage['title'].' - Шиномонтаж в Одессе, ул. Весенняя 14', $currPage['title'].', шиносервис, диски, шины');
+      $this->setMeta($currPage['title_en'].' - Tire fitting in Odessa, st. Spring 14',
+        $currPage['title_en'].' - Tire fitting in Odessa, st. Spring 14', $currPage['title'].', tire service, rims, tires');
     }
     else{
-      throw new \Exception("Страница не найдена", 404);
+      throw new \Exception("Page not found", 404);
     }
 
     $this->set(compact('currPage'));

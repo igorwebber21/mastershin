@@ -5,6 +5,7 @@ namespace app\controllers;
 
 use ishop\App;
 use ishop\Cache;
+use RedBeanPHP\Facade;
 use RedBeanPHP\R;
 
 class PageController extends AppController
@@ -12,7 +13,6 @@ class PageController extends AppController
 
   public function viewAction()
   {
-
     $currPage = R::findOne('pages', 'alias = ?', [$this->route['alias']]);
     $currPage = object_to_array($currPage);
 

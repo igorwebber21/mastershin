@@ -64,8 +64,25 @@ jQuery(function(){
           '+38<span class="code">(050)</span>-866-56-07 ' +
           '<a style="font-weight: normal; color: #fff;" href="viber://chat?number=%2B380508665607">(Viber)</a> ' +
           '</span>' +
-      '  </div>');
+      '  </div>' +
+    '<div class="header-lang">\n' +
+      '                  <a href="/" lang="ru"> RU </a>\n' +
+      '                  <span>|</span>\n' +
+      '                  <a href="/ua" lang="ua"> UA </a>\n' +
+      '                  <span>|</span>\n' +
+      '                  <a href="/en" lang="en"> EN </a>\n' +
+      '            </div>');
+
+    setTimeout(function(){
+      jQuery("#mobile-menu .header-lang a").each(function(){
+        if(jQuery(this).attr('lang') == lang){
+          jQuery(this).addClass('selected-lang');
+        }
+      });
+    });
   },500);
+
+
 
 
   jQuery('ul#menu-primary-menu li').each(function() {
@@ -100,7 +117,7 @@ jQuery(function(){
   if(textareaMessage.length !== 0){
     textareaMessage.html("<textarea id=\"contact-user-message\" name=\"contact-user-message\" cols=\"40\" rows=\"10\" " +
       "class=\"wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required input-full form-control\" " +
-      "aria-required=\"true\" aria-invalid=\"false\" placeholder=\"Сообщение\" required></textarea>");
+      "aria-required=\"true\" aria-invalid=\"false\" placeholder=\"" + dictMessage + "\" required></textarea>");
   }
 
 

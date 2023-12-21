@@ -29,3 +29,7 @@
     }
 
 </style>
+
+<script>
+    jQuery(".loader-wrapper").fadeOut(1000);
+</script>

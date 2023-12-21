@@ -13,9 +13,9 @@ class MainController extends AppController
 
     $this->set([]);
 
-    $this->setMeta('Мастер Шин 3 - Шиномонтаж в Одессе, ул. Весенняя 14',
-      'Мастер Шин - профессиональный шиносервис и реставрация дисков в Одессе',
-      'реставрация дисков, шиносервис, шиномонтаж одесса, шиномонтаж, покраска дисков');
+    $this->setMeta('Master Shin - Tire fitting in Odessa, st. Spring 14',
+      'Master Shin - professional tire service and wheel restoration in Odessa',
+      'disk restoration, tire service, tire fitting Odessa, tire fitting, wheel painting');
 
   }
 
@@ -24,9 +24,9 @@ class MainController extends AppController
     $signupMode = 1;
     $this->set(compact('signupMode'));
 
-    $this->setMeta('Запись на прием в шиномонтаж Мастер Шин - Одесса, ул. Весенняя 14',
-      'Мастер Шин - профессиональный шиносервис и реставрация дисков в Одессе',
-      'запись в шиномонтаж, визит в шиномонтаж, реставрация дисков, шиносервис, шиномонтаж одесса, шиномонтаж, покраска дисков');
+    $this->setMeta('Make an appointment at the tire fitting Master Shin - Odessa, st. Spring 14',
+      'Master Tire - professional tire service and wheel restoration in Odessa',
+      'recording in a tire fitting, a visit to a tire fitting, wheel restoration, tire service, tire fitting Odessa, tire fitting, wheel painting');
 
   }
 }

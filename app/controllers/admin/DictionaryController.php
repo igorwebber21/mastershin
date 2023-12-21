@@ -19,7 +19,7 @@ class DictionaryController extends AppController
   public function indexAction()
   {
     $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-    $perpage = 15;
+    $perpage = 150;
     $count = R::count('dictionary');
     $pagination = new Pagination($page, $perpage, $count);
     $start = $pagination->getStart();

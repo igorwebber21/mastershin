@@ -747,7 +747,7 @@
       <div class="loader-circle-2"></div>
     </div>
     <div class="needle"></div>
-    <div class="loading">Загрузка</div>
+    <div class="loading"><?=$dictionary['Loading'][$lang]?></div>
   </div>
 </div>
 <!-- //Loader -->
@@ -884,7 +884,13 @@
 
                     <?php foreach ($mainServices as $service): if($service['category'] == 'tires'): ?>
                       <li id="nav-menu-item-<?=$service['id']?>" class="sub-menu-item menu-tires  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-car_services">
-                        <a href="/<?=$langUrl?>/service/<?=$service['alias']?>"><?=$service['name']?></a>
+                        <a href="<?php echo $langUrl ? '/'.$langUrl.'/' : '/'; ?>service/<?=$service['alias']?>">
+                          <?php
+                          if($lang == 'ru') echo $service['name'];
+                          if($lang == 'ua') echo $service['name_ua'];
+                          if($lang == 'en') echo $service['name_en'];
+                          ?>
+                        </a>
                       </li>
                     <?php endif; endforeach;?>
 
@@ -897,7 +903,13 @@
                 <ul class="dropdown-menu menu-odd  menu-depth-1">
                   <?php foreach ($mainServices as $service): if($service['category'] == 'disks'): ?>
                       <li id="nav-menu-item-<?=$service['id']?>" class="sub-menu-item menu-disks menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-car_services">
-                          <a href="/<?=$langUrl?>/service/<?=$service['alias']?>"><?=$service['name']?></a>
+                          <a href="<?php echo $langUrl ? '/'.$langUrl.'/' : '/'; ?>service/<?=$service['alias']?>">
+                            <?php
+                            if($lang == 'ru') echo $service['name'];
+                            if($lang == 'ua') echo $service['name_ua'];
+                            if($lang == 'en') echo $service['name_en'];
+                            ?>
+                          </a>
                       </li>
                   <?php endif; endforeach;?>
                 </ul>
@@ -910,7 +922,13 @@
               <?php if($pages): ?>
                 <?php foreach ($pages as $page): ?>
                     <li id="menu-link-<?=$page['alias']?>" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="/<?=$langUrl?>/<?=$page['alias']?>" class="menu-link main-menu-link"><?=$page['title']?></a>
+                        <a href="<?php echo $langUrl ? '/'.$langUrl.'/' : '/'; ?><?=$page['alias']?>" class="menu-link main-menu-link">
+                          <?php
+                          if($lang == 'ru') echo $page['title'];
+                          if($lang == 'ua') echo $page['title_ua'];
+                          if($lang == 'en') echo $page['title_en'];
+                          ?>
+                        </a>
                     </li>
                 <?php endforeach;?>
               <?php endif;?>
@@ -1096,7 +1114,13 @@
                                                                     <?php foreach ($mainServices as $mainService):
                                                                       if($mainService['id'] == 2) $mainService['name'] = "Переобувка авто";
                                                                       ?>
-                                                                    <option value="<?=$mainService['id']?>"><?=$mainService['name']?></option>
+                                                                    <option value="<?=$mainService['id']?>">
+                                                                        <?php
+                                                                        if($lang == 'ru') echo $mainService['name'];
+                                                                        if($lang == 'ua') echo $mainService['name_ua'];
+                                                                        if($lang == 'en') echo $mainService['name_en'];
+                                                                        ?>
+                                                                    </option>
                                                                     <?php endforeach;?>
                                                                 </select>
                                                             </span>
@@ -1355,6 +1379,8 @@
   var zapisDay = <?=explode('.', $zapisDate)[0]?>;
   var nowDate = '<?=$nowDate?>';
   var nowHours = '<?=$nowHours?>';
+  var lang = '<?=$lang?>';
+  var dictMessage = '<?=$dictionary['Message'][$lang]?>';
   var timeIntervals = <?=json_encode($timeIntervals, 1)?>;
   var signupMode = <?php echo (isset($signupMode)) ? 1 : 0; ?>;
 </script>

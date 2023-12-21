@@ -2,7 +2,7 @@
 
         <div id="pageTitle">
             <div class="container">
-                <h1><?=$currPage['title']?></h1>
+                <h1><?=$currPage['title_en']?></h1>
             </div>
         </div>
         <div id="pageContent">
@@ -12,7 +12,7 @@
             <div class="block<?=$class?>">
                 <div class="container">
 
-                  <?=$currPage['text']?>
+                  <?=$currPage['text_en']?>
                 </div>
             </div>
         </div>

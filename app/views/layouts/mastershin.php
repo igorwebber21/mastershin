@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CPoppins%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=latin%2Ccyrillic-ext%2Clatin-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Cvietnamese&#038;display=swap"/>
     </noscript>
     <link rel="stylesheet" href="/css/styles.css" media="all" data-minify="1"/>
-    <link rel="stylesheet" href="/css/mystyles.css" media="all" data-minify="1"/>
+    <link rel="stylesheet" href="/css/mystyles.css?v=1001 media="all" data-minify="1"/>
 
     <!-- / Yoast SEO plugin. -->
 

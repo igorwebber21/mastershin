@@ -491,3 +491,20 @@ display: none;
 		top: -4px;
 	}
 }
+
+#video-block .block-aside__title{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+#video-block .video-item {
+	padding: 0 20px;
+	text-align: center;
+}
+
+#video-block video{
+	width: 100%;
+	height: auto;
+	max-width: 300px;
+	margin: 0 auto;
+}

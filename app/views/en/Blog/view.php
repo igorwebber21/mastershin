@@ -11,6 +11,19 @@
 
                 <div class="col-12 col-sm-5 col-md-4 service-leftbar">
                     <div class="block-aside-wrapper">
+
+                      <?php if($article['video_url']): ?>
+                          <div class="block-aside__wrapper widget block-aside" id="video-block">
+                              <h4 class="block-aside__title">Video review</h4>
+                              <div class="video-item">
+                                  <video width="320" height="240" controls="controls" autoplay="autoplay" loop playsinline muted>
+                                      <source src="<?=PATH?>/video/<?=$article['video_url']?>" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                  </video>
+                              </div>
+                          </div>
+                      <?php endif; ?>
+
                         <div class="block-aside__wrapper widget block-aside" id="service_menu-3">
                             <h4 class="block-aside__title"><?php echo ($article['category'] == 'tires') ? $dictionary['Tires'][$lang] :  $dictionary['Disks'][$lang];?></h4>
                             <div class="block-aside__content no-indent">

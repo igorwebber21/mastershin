@@ -1,37 +1,32 @@
 <?php
 
-    namespace app\controllers;
 
-    use app\models\Category;
-    use ishop\App;
-    use ishop\Router;
-    use RedBeanPHP\R as R;
-    use ishop\Cache;
+namespace app\controllers;
 
-    class MainController extends AppController {
 
-//    public $layout = 'test';
+use app\controllers\AppController;
+use RedBeanPHP\R;
 
-        public function indexAction(){
+class MainController extends AppController
+{
+  public function indexAction(){
 
-          $this->set([]);
+    $this->set([]);
 
-            $this->setMeta('Мастер Шин - Шиномонтаж в Одессе, ул. Весенняя 14',
-                      'Мастер Шин - профессиональный шиносервис и реставрация дисков в Одессе',
-                       'реставрация дисков, шиносервис, шиномонтаж одесса, шиномонтаж, покраска дисков');
+    $this->setMeta('Майстер Шин - Шиномонтаж в Одесі, вул. Весняна 14',
+      'Майстер Шин - професійний шиносервіс та реставрація дисків в Одесі.',
+      'реставрація дисків, шиносервіс, шиномонтаж одеса, шиномонтаж, фарбування дисків');
 
-        }
+  }
 
-      public function signupAction(){
+  public function signupAction(){
 
-        $signupMode = 1;
-        $this->set(compact('signupMode'));
+    $signupMode = 1;
+    $this->set(compact('signupMode'));
 
-        $this->setMeta('Запись на прием в шиномонтаж Мастер Шин - Одесса, ул. Весенняя 14',
-          'Мастер Шин - профессиональный шиносервис и реставрация дисков в Одессе',
-          'запись в шиномонтаж, визит в шиномонтаж, реставрация дисков, шиносервис, шиномонтаж одесса, шиномонтаж, покраска дисков');
+    $this->setMeta('Запис на прийом у шиномонтаж Майстер Шин - Одеса, вул. Весняна 14',
+      'Майстер Шин - професійний шиносервіс та реставрація дисків в Одесі',
+      'запис у шиномонтаж, візит у шиномонтаж, реставрація дисків, шиносервіс, шиномонтаж одеса, шиномонтаж, фарбування дисків');
 
-      }
-
-    }
-
+  }
+}

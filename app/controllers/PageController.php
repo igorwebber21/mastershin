@@ -5,24 +5,25 @@ namespace app\controllers;
 
 use ishop\App;
 use ishop\Cache;
-use RedBeanPHP\Facade;
 use RedBeanPHP\R;
+use app\controllers\AppController;
 
 class PageController extends AppController
 {
 
   public function viewAction()
   {
+
     $currPage = R::findOne('pages', 'alias = ?', [$this->route['alias']]);
     $currPage = object_to_array($currPage);
 
     if($currPage){
 
-      $this->setMeta($currPage['title'].' - Шиномонтаж в Одессе, ул. Весенняя 14',
-        $currPage['title'].' - Шиномонтаж в Одессе, ул. Весенняя 14', $currPage['title'].', шиносервис, диски, шины');
+      $this->setMeta($currPage['title_ua'].' - Шиномонтаж в Одесі, вул. Весняна 14',
+        $currPage['title_ua'].' - Шиномонтаж в Одесі, вул. Весняна 14', $currPage['title'].', шиносервіс, диски, шини');
     }
     else{
-      throw new \Exception("Страница не найдена", 404);
+      throw new \Exception("Сторінка не знайдена", 404);
     }
 
     /*$existPage = in_array($this->route['alias'], $pages);

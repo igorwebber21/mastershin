@@ -33,7 +33,7 @@
                                                                                               <?=$dictionary['TrustBestGetResults'][$lang]?>
                                                                                             </p>
                                                                                             <div>
-                                                                                                <a href="/ua/prays-list" class="btn btn-border slide-btn">
+                                                                                                <a href="/ru/prays-list" class="btn btn-border slide-btn">
                                                                                                     <span><?=$dictionary['LearnMore'][$lang]?></span>
                                                                                                 </a>
                                                                                             </div>
@@ -59,7 +59,7 @@
                                                                                               <?=$dictionary['PaintingDiscsThermalEnamel'][$lang]?>
                                                                                             </p>
                                                                                             <div>
-                                                                                                <a href="/ua/prays-list" class="btn btn-border slide-btn">
+                                                                                                <a href="/ru/prays-list" class="btn btn-border slide-btn">
                                                                                                     <span><?=$dictionary['LearnMore'][$lang]?></span>
                                                                                                 </a>
                                                                                             </div>

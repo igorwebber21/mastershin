@@ -66,9 +66,9 @@ jQuery(function(){
           '</span>' +
       '  </div>' +
     '<div class="header-lang">\n' +
-      '                  <a href="/" lang="ru"> RU </a>\n' +
+      '                  <a href="/" lang="ua"> UA </a>\n' +
       '                  <span>|</span>\n' +
-      '                  <a href="/ua" lang="ua"> UA </a>\n' +
+      '                  <a href="/ru" lang="ru"> RU </a>\n' +
       '                  <span>|</span>\n' +
       '                  <a href="/en" lang="en"> EN </a>\n' +
       '            </div>');

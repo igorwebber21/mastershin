@@ -856,9 +856,9 @@
             </div>
 
             <div class="header-lang">
-                  <a href="/" class="<?php  if($lang == 'ru') echo 'selected-lang'; ?>"> RU </a>
+                  <a href="/" class="<?php if($lang == 'ua') echo 'selected-lang'; ?>"> UA </a>
                   <span>|</span>
-                  <a href="/ua" class="<?php if($lang == 'ua') echo 'selected-lang'; ?>"> UA </a>
+                  <a href="/ru" class="<?php  if($lang == 'ru') echo 'selected-lang'; ?>"> RU </a>
                   <span>|</span>
                   <a href="/en" class="<?php if($lang == 'en') echo 'selected-lang'; ?>"> EN </a>
             </div>
@@ -1384,8 +1384,8 @@
   var timeIntervals = <?=json_encode($timeIntervals, 1)?>;
   var signupMode = <?php echo (isset($signupMode)) ? 1 : 0; ?>;
 </script>
-<script src="/js/myscripts.js" data-minify="1" defer></script>
-<script src="/js/scripts.js" data-minify="1" defer></script>
+<script src="/js/myscripts.js?v=2" data-minify="1" defer></script>
+<script src="/js/scripts.js?v=2" data-minify="1" defer></script>
 <script src="//code-ya.jivosite.com/widget/KiEqxTgMRT" async></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-211512030-1"></script>

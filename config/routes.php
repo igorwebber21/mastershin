@@ -7,9 +7,9 @@
     Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['prefix' => 'admin']);
 
     // ua
-    Router::add('^ua$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'ua']);
-    Router::add('^ua/?(?P<alias>[a-z-]+)/?$', ['controller' => 'Page', 'action' => 'view', 'prefix' => 'ua']); #for pages
-    Router::add('^ua/service/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Blog', 'action' => 'view', 'prefix' => 'ua']);
+    Router::add('^ru$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'ru']);
+    Router::add('^ru/?(?P<alias>[a-z-]+)/?$', ['controller' => 'Page', 'action' => 'view', 'prefix' => 'ru']); #for pages
+    Router::add('^ru/service/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Blog', 'action' => 'view', 'prefix' => 'ru']);
 
     // en
     Router::add('^en$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'en']);

@@ -10,10 +10,12 @@
     class UserController extends AppController
     {
 
-        public $auth = [
+        private $auth = [
           'login' => 'igortest',
           'password' => 'asdc2121'
         ];
+
+        private $sender = 'Best-Shop';
 
 
         public function claimAction(){
@@ -24,7 +26,7 @@
             $phone = $_POST['userPhone'];
             $message = $_POST['userMessage'];
             $zapisService = $_POST['zapisService'];
-            $zapisServiceName = $_POST['zapisServiceName'];
+            $zapisServiceName = trim($_POST['zapisServiceName']);
             $zapisDate = $_POST['zapisDate'];
             $zapisTime = $_POST['zapisTime'];
             $carModel = $_POST['carModel'];
@@ -45,7 +47,7 @@
               $client->Auth($this->auth);
 
               $sms = [
-                'sender' => 'Best-offer',
+                'sender' => $this->sender,
                 'destination' => '+380508665607',  //+380939379441
                 'text' => $name.' '.$phone.' - запись на прием №'.$lastClaimId
               ];
@@ -53,9 +55,9 @@
               $client->SendSMS($sms);
 
               $sms2 = [
-                'sender' => 'Best-offer',
-                'destination' => '+'.preg_replace("/[^0-9]/", '', $phone), //+380939379441
-                'text' => 'Вы записаны на услугу "'.$zapisServiceName.'" в шиносервис Мастер шин на '.$zapisDate.' в '.$zapisTime
+               'sender' => $this->sender,
+               'destination' => '+'.preg_replace("/[^0-9]/", '', $phone), //+380939379441
+               'text' => 'Вы записаны на услугу "'.$zapisServiceName.'" в шиносервис Мастер шин на '.$zapisDate.' в '.$zapisTime
               ];
 
               $client->SendSMS($sms2);

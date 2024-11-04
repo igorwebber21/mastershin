@@ -49,7 +49,7 @@ class MailController extends AppController
        if($hourDif < 1 && $hourDif > 0)
        {
            $sms = [
-             'sender' => 'Best-offer',
+             'sender' => 'Best-Shop',
              'destination' => '+'.preg_replace("/[^0-9]/", '', $service['phone']),  //+380939379441
              'text' => 'До визита в шиномонтаж Мастер Шин: 1 час. Наш сайт - mastershin.od.ua'
            ];

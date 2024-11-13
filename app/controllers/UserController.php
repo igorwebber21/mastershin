@@ -15,7 +15,7 @@
           'password' => 'asdc2121'
         ];
 
-        private $sender = 'Best-Shop';
+        private $sender = 'MasterShin';
 
 
         public function claimAction(){
